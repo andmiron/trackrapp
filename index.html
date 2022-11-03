@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Trackr app</title>
+  </head>
+  <body>
+    <!-- NAGIVATION -->
+    <nav>
+      <div class="flex-row">
+        <h1 class="primary-heading">Trackr app</h1>
+        <ion-icon name="card"></ion-icon>
+      </div>
+      <form class="login">
+        <input
+          class="input-login input-login--user"
+          type="text"
+          placeholder="am"
+        />
+        <input
+          class="input-login input-login--pin"
+          type="password"
+          placeholder="1111"
+          min="0"
+          max="9999"
+          maxlength="4"
+        />
+        <button class="login--btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="login-icon"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M17 8l4 4m0 0l-4 4m4-4H3"
+            />
+          </svg>
+        </button>
+      </form>
+    </nav>
+    <!-- MAIN -->
+    <main class="app">
+      <!-- BALANCE -->
+      <div class="balance">
+        <p class="balance-value">0000$</p>
+        <div>
+          <p class="balance-label">Current balance</p>
+          <p class="balance-date">As of <span class="date">05/03/2022</span></p>
+        </div>
+      </div>
+
+      <!-- OPERATION : ADD INCOME -->
+      <div class="operation operation--income">
+        <h2>Add income</h2>
+        <form class="form">
+          <select class="form--input form--income--category">
+            <option>Uncategorized</option>
+            <option>Salary</option>
+            <option>Appartment</option>
+            <option>Mother's money</option>
+            <option>Father's money</option>
+            <option>Sold Property</option>
+          </select>
+          <input
+            type="number"
+            class="form--input form--income--amount"
+            id="incomeAmount"
+          />
+          <button class="form--btn form--btn--income">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="input-icon"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+          </button>
+          <label class="form--label">Category</label>
+          <label for="incomeAmount" class="form--label form--label--income"
+            >Amount</label
+          >
+        </form>
+      </div>
+
+      <!-- OPERATION : ADD OUTCOME -->
+      <div class="operation operation--outcome">
+        <h2>Add outcome</h2>
+        <form class="form">
+          <select class="form--input form--output--category">
+            <option>Uncategorized</option>
+            <option>Groceries</option>
+            <option>Cafe</option>
+            <option>Children</option>
+            <option>Auto/Gas</option>
+            <option>Entertainment</option>
+            <option>Appartment</option>
+            <option>Health</option>
+            <option>Clothes</option>
+            <option>Subscriptions</option>
+            <option>Taxes</option>
+          </select>
+          <input
+            type="number"
+            class="form--input form--outcome--amount"
+            id="outcomeAmount"
+          />
+          <button class="form--btn form--btn--outcome">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="input-icon"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+          </button>
+          <label class="form--label">Category</label>
+          <label for="outcomeAmount" class="form--label">Amount</label>
+        </form>
+      </div>
+
+      <!-- OPERATION : CLOSE -->
+      <div class="operation operation--close">
+        <h2>Close account</h2>
+        <form class="form form--close" autocomplete="off">
+          <input
+            type="text"
+            class="form--input form--input--user"
+            autocomplete="new-password"
+          />
+          <input
+            type="password"
+            class="form--input form--input--pin"
+            maxlength="6"
+            autocomplete="new-password"
+          />
+          <button class="form--btn form--btn--close">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="input-icon"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+          </button>
+          <label class="form--label">Confirm user</label>
+          <label class="form--label">Confirm PIN</label>
+        </form>
+      </div>
+
+      <!-- TRANSACTION HISTORY -->
+      <div class="history"></div>
+
+      <!-- SUMMARY -->
+      <div class="summary">
+        <button class="btn--sort">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="input-icon"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"
+            /></svg
+          >SORT
+        </button>
+        <p class="summary--label">In</p>
+        <p class="summary--value summary--value--in">0000$</p>
+        <p class="summary--label">Out</p>
+        <p class="summary--value summary--value--out">0000$</p>
+      </div>
+
+      <!-- LOGOUT TIMER -->
+      <p class="logout-timer">
+        You will be logged out in <span class="timer">00:00</span>
+      </p>
+    </main>
+    <script src="index.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

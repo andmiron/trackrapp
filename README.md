@@ -4,7 +4,7 @@ Little app to track everyday expenses and incomes.
 
 Live on:
 - https://trackrapplication.netlify.app
-- https://test-app1441.azurewebsites.net
+- https://white-rock-0631c8603.5.azurestaticapps.net
 
 Log in by using 'am' as Login and '1111' as Password
 
